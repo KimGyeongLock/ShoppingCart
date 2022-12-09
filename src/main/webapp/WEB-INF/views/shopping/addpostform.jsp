@@ -13,7 +13,7 @@
 <hr>
 <form action="addok" method="post">
   <table id="edit" class="table table-bordered" style="width:600px; margin:15px">
-    <tr><td>구매물품:</td><td><input type="text" name="ItemID"/></td></tr><!--ItemName type="text"-->
+    <tr><td>구매물품:</td><td><input type="text" name="ItemName"/></td></tr><!--ItemName type="text"-->
     <tr><td>구매처:</td><td>
       <select name="Shoppingmall">
         <option value="Naver">네이버</option>
@@ -29,7 +29,7 @@
     <tr><td>배달비:</td><td><input type="number" name="delivery"/></td></tr>
   </table>
   <button type="button" class="btn btn-dark" onclick="location.href='list'" style="margin-left: 10px">목록보기</button>
-  <input type="submit" class="btn btn-dark" value="등록하기" style="margin-left: 10px" />
+  <input type="submit" class="btn btn-dark" value="등록하기" />
   <button type="reset" class="btn btn-dark">초기화</button>
 </form>
 
