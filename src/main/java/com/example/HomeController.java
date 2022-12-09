@@ -31,6 +31,7 @@ public class HomeController {
 
     @RequestMapping(value = "/addok", method = RequestMethod.POST)
     public String addPostOK(ShoppingVO vo) {
+        System.out.println("==========");
         int i = shoppingService.insertCart(vo);
         if (i == 0)
             System.out.println("데이터 추가 실패 ");
