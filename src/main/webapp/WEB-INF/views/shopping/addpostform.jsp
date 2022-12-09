@@ -11,7 +11,7 @@
 <br>
 <h1>&nbsp;Add New Post</h1>
 <hr>
-<form action="/addok" method="post">
+<form action="addok" method="post">
   <table id="edit" class="table table-bordered" style="width:600px; margin:15px">
     <tr><td>구매물품:</td><td><input type="text" name="ItemID"/></td></tr><!--ItemName type="text"-->
     <tr><td>구매처:</td><td>
