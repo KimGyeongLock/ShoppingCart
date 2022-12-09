@@ -25,7 +25,7 @@
     </td></tr><!--Shoppingmall type="select"-->
     <tr><td>가격:</td><td><input type="text" name="price"/></td></tr><!--Price type="text"-->
     <tr><td>수량:</td><td><input type="number" name="cnt" /></td></tr><!--cnt type="number"-->
-    <tr><td>할인가격:</td><td><input type="number" name="discountPrice"/></td></tr>
+    <tr><td>할인된가격:</td><td><input type="number" name="discountPrice"/></td></tr>
     <tr><td>배달비:</td><td><input type="number" name="delivery"/></td></tr>
   </table>
   <button type="button" class="btn btn-dark" onclick="location.href='list'" style="margin-left: 10px">목록보기</button>

@@ -63,7 +63,9 @@ public class ShoppingVO {
 	}
 
 	public int getDiscount() {
-		return discount;
+		double temp=(getPrice()-getDiscountPrice()*1.0)/getPrice()*100;
+		System.out.println(temp);
+		return (int)temp;
 	}
 
 	public void setDiscount(int discount) {

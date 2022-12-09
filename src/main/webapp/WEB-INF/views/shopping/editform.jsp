@@ -17,10 +17,19 @@
   <form:hidden path="itemID"/>
   <table id="edit" class="table table-bordered" style="width:600px; margin:15px">
     <tr><td>물품명:</td><td><form:input path="itemName"/></td></tr>
-    <tr><td>구매처</td><td><form:input path="shoppingmall"/></td></tr>
+    <tr><td>구매처:</td><td>
+      <select name="Shoppingmall">
+        <option value="Naver">네이버</option>
+        <option value="Coupang">쿠팡</option>
+        <option value="Gmarket">G마켓</option>
+        <option value="11street">11번가</option>
+        <option value="other">그 외</option>
+      </select>
+    </td></tr>
     <tr><td>가격</td><td><form:input path="price"/></td></tr>
-    <tr><td>갯수</td><td><form:input path="cnt" /></td></tr>
-    <tr><td>할인가격</td><td><form:input path="discountPrice"/></td></tr>
+<%--    <tr><td>갯수</td><td><form:input path="cnt" /></td></tr>--%>
+    <tr><td>수량:</td><td><input type="number" name="cnt" /></td></tr>
+    <tr><td>할인된가격</td><td><form:input path="discountPrice"/></td></tr>
     <tr><td>배송비</td><td><form:input path="delivery"/></td></tr>
   </table>
   <input type="submit" class="btn btn-dark" value="수정하기" style="margin-left: 10px" />
