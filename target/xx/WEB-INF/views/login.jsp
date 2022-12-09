@@ -9,6 +9,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta charset="UTF-8">
     <title>Login</title>
     <style>
@@ -19,13 +20,16 @@
 </head>
 <body>
 <div style="width:100%; text-align: center; padding-top: 100px">
-    <img src="../img/snowman.jpeg" height="250">
+    <img src="../img/logo.png" height="100">
+    <p style="color:lightgray">Made by 21900072 김기연 and 21900064 김경록</p>
+    <hr>
     <form method="post" action="loginOk">
-        <div><label>User ID: </label><input type="text" name="userid" /></div>
-        <div><label>Password: </label>
-             <input type="password" name="password" /></div>
-        <button type="submit">login</button>
+        <div><label>User ID: </label><br><input type="text" name="userid" /></div>
+        <br>
+        <div><label>Password: </label><br><input type="password" name="password" /></div>
+        <br><button type="submit" class="btn btn-outline-primary">login</button>
     </form>
 </div>
+
 </body>
 </html>

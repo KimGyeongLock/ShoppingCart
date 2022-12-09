@@ -9,6 +9,7 @@
 <body>
 
 <%--<jsp:forward page="/" />--%>
+test
 <a href="/list">이동</a>
 </body>
 </html>
