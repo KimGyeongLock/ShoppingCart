@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Shopping">
+    <insert id="insertCart">
+        insert into Shopping (ItemName, Shoppingmall, Price, cnt, discountPrice, discount, delivery, totalPrice) values
+        (#{ItemName} , #{Shoppingmall} , #{Price} , #{cnt} , #{discountPrice}, #{discount}, #{delivery}, #{totalPrice})
+    </insert>
+    <update id="updateCart">
+        update Shopping
+        set ItemName=#{ItemName}, Shoppingmall=#{Shoppingmall}, Price=#{Price}, cnt=#{cnt}, discountPrice=#{discountPrice}, discount=#{discount}, delivery=#{delivery}, totalPrice=#{totalPrice}  where ItemID=#{ItemID}
+    </update>
+    <delete id="deleteCart">
+        delete from Shopping where ItemID=#{ItemID}
+    </delete>
+    <select id="getCart" resultType="cart">
+        select * from Shopping where ItemID=#{ItemID}
+    </select>
+    <select id="getCartList" resultType="cart">
+        select * from Shopping order by ItemID desc
+    </select>
+</mapper>
