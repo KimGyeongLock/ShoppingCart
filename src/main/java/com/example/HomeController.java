@@ -1,7 +1,6 @@
 package com.example;
 
-import com.example.bean.BoardVO;
-import com.example.dao.BoardDAO;
+import com.example.bean.ShoppingVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,25 +13,25 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HomeController {
 
     @Autowired
-    BoardServiceImpl boardService;
+    ShoppingServiceImpl shoppingService;
 
     @RequestMapping("/")
     public String home() { return "index"; }
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
-    public String boardlist(Model model) {
-        model.addAttribute("list", boardService.getBoardList());
-        return "board/posts";
+    public String shoppinglist(Model model) {
+        model.addAttribute("list", shoppingService.getCartList());
+        return "shopping/posts";
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)
     public String addPost() {
-        return "board/addpostform";
+        return "shopping/addpostform";
     }
 
     @RequestMapping(value = "/addok", method = RequestMethod.POST)
-    public String addPostOK(BoardVO vo) {
-        int i = boardService.insertBoard(vo);
+    public String addPostOK(ShoppingVO vo) {
+        int i = shoppingService.insertCart(vo);
         if (i == 0)
             System.out.println("데이터 추가 실패 ");
         else
@@ -40,25 +39,25 @@ public class HomeController {
         return "redirect:list";
     }
 
-    @RequestMapping(value = "/viewpost/{id}", method = RequestMethod.GET)
-    public String viewPost(@PathVariable("id") int id, Model model) {
-        System.out.println("View post");
-        BoardVO boardVO = boardService.getBoard(id);
-        model.addAttribute("boardVO", boardVO);
-        return "board/view";
-    }
+//    @RequestMapping(value = "/viewpost/{id}", method = RequestMethod.GET)
+//    public String viewPost(@PathVariable("id") int id, Model model) {
+//        System.out.println("View post");
+//        ShoppingVO shoppingVO = shoppingService.getCart(id);
+//        model.addAttribute("boardVO", shoppingVO);
+//        return "board/view";
+//    }
 
     @RequestMapping(value = "/editpost/{id}", method = RequestMethod.GET)
     public String editPost(@PathVariable("id") int id, Model model) {
         System.out.println("Edit post");
-        BoardVO boardVO = boardService.getBoard(id);
-        model.addAttribute("boardVO", boardVO);
-        return "board/editform";
+        ShoppingVO shoppingVO = shoppingService.getCart(id);
+        model.addAttribute("shoppingDAO", shoppingVO);
+        return "shopping/editform";
     }
 
     @RequestMapping(value = "/editok", method = RequestMethod.POST)
-    public String editPostOK(BoardVO vo) {
-        int i = boardService.updateBoard(vo);
+    public String editPostOK(ShoppingVO vo) {
+        int i = shoppingService.updateCart(vo);
         if (i == 0)
             System.out.println("데이터 수정 실패 ");
         else
@@ -68,7 +67,7 @@ public class HomeController {
 
     @RequestMapping(value = "/deleteok/{id}", method = RequestMethod.GET)
     public String deletePostOk(@PathVariable("id") int id) {
-        int i = boardService.deleteBoard(id);
+        int i = shoppingService.deleteCart(id);
         if(i == 0)
             System.out.println("데이터 삭제 실패 ");
         else
