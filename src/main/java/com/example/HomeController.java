@@ -51,7 +51,7 @@ public class HomeController {
     public String editPost(@PathVariable("id") int id, Model model) {
         System.out.println("Edit post");
         ShoppingVO shoppingVO = shoppingService.getCart(id);
-        model.addAttribute("shoppingDAO", shoppingVO);
+        model.addAttribute("shoppingVO", shoppingVO);
         return "shopping/editform";
     }
 
