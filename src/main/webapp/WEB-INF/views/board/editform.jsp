@@ -15,14 +15,17 @@
 <hr>
 <form:form modelAttribute="boardVO" method="POST" action="../editok">
 	<form:hidden path="seq"/>
-	<table id="edit" class="table table-bordered" style="width:30%;">
-		<tr><td>카테고리:</td><td><form:input path="category"/></td></tr>
-		<tr><td>제목</td><td><form:input path="title"/></td></tr>
-		<tr><td>글쓴이</td><td><form:input path="writer"/></td></tr>
-		<tr><td>내용</td><td><form:textarea cols="50" rows="5" path="content" /></td></tr>
+	<table id="edit" class="table table-bordered" style="width:600px; margin:15px">
+		<tr><td>카테고리:</td><td><form:input path="category"/></td></tr><%--ItemName type="text"--%>
+		<tr><td>제목</td><td><form:input path="title"/></td></tr><%--Shoppingmall type="text"--%>
+		<tr><td>글쓴이</td><td><form:input path="writer"/></td></tr><%--Price type="text"--%>
+		<tr><td>내용</td><td><form:textarea cols="50" rows="5" path="content" /></td></tr><%--cnt type="text"--%>
+<%--	<tr><td>dcprice</td><td><form:input path="writer"/></td></tr>
+		<tr><td>deliveryfee</td><td><form:input path="writer"/></td></tr>
+--%>
 	</table>
-	<input type="submit" value="수정하기"/>
-	<input type="button" value="취소하기" onclick="history.back()" />
+	<input type="submit" class="btn btn-dark" value="수정하기" style="margin-left: 10px" />
+	<input type="button" class="btn btn-dark" value="취소하기" onclick="history.back()" />
 </form:form>
 
 </body>
