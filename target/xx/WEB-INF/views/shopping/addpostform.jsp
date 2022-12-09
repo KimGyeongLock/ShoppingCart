@@ -23,10 +23,10 @@
         <option value="other">그 외</option>
       </select>
     </td></tr><!--Shoppingmall type="select"-->
-    <tr><td>가격:</td><td><input type="text" name="price"/></td></tr><!--Price type="text"-->
-    <tr><td>수량:</td><td><input type="number" name="cnt" /></td></tr><!--cnt type="number"-->
-    <tr><td>할인된가격:</td><td><input type="number" name="discountPrice"/></td></tr>
-    <tr><td>배달비:</td><td><input type="number" name="delivery"/></td></tr>
+    <tr><td>가격:</td><td><input type="number" name="price" min="1"/></td></tr><!--Price type="text"-->
+    <tr><td>수량:</td><td><input type="number" name="cnt" min="1"/></td></tr><!--cnt type="number"-->
+    <tr><td>할인된가격:</td><td><input type="number" name="discountPrice" min="1"/></td></tr>
+    <tr><td>배달비:</td><td><input type="number" name="delivery" min="1"/></td></tr>
   </table>
   <button type="button" class="btn btn-dark" onclick="location.href='list'" style="margin-left: 10px">목록보기</button>
   <input type="submit" class="btn btn-dark" value="등록하기" />

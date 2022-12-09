@@ -28,7 +28,7 @@
     </td></tr>
     <tr><td>가격</td><td><form:input path="price"/></td></tr>
 <%--    <tr><td>갯수</td><td><form:input path="cnt" /></td></tr>--%>
-    <tr><td>수량:</td><td><input type="number" name="cnt" /></td></tr>
+    <tr><td>수량:</td><td><input type="number" name="cnt" value="1" min="1"/></td></tr>
     <tr><td>할인된가격</td><td><form:input path="discountPrice"/></td></tr>
     <tr><td>배송비</td><td><form:input path="delivery"/></td></tr>
   </table>
