@@ -8,9 +8,9 @@
 </head>
 <body>
 
-<%--<jsp:forward page="/" />--%>
+<jsp:forward page="login.jsp" />
 test
-<a href="/list">이동</a>
+<%--<a href="">이동</a>--%>
 </body>
 </html>
 
